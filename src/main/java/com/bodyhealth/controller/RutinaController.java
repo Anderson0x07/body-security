@@ -37,7 +37,7 @@ public class RutinaController {
         model.addAttribute("ejercicios",listarEjercicios());
         model.addAttribute("musculos", musculoService.listarMusculos());
 
-        return "/admin/rutinas/dash-rutinas";
+        return "admin/rutinas/dash-rutinas";
     }
 
     public List<RutinaEjercicio> listarRutinaEjercicio(){
@@ -60,7 +60,7 @@ public class RutinaController {
 
         model.addAttribute("musculos", musculoService.listarMusculos());
 
-        return "/trainer/rutinas/dash-rutinas";
+        return "trainer/rutinas/dash-rutinas";
     }
 
     @PostMapping("/trainer/dash-rutinas/guardar-rutina")

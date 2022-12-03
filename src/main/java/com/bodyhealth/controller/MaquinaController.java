@@ -30,7 +30,7 @@ public class MaquinaController {
         model.addAttribute("maquinas",maquinas);
         model.addAttribute("proveedores",proveedorService.listarProveedores());
 
-        return "/admin/maquinas/dash-maquinas";
+        return "admin/maquinas/dash-maquinas";
     }
 
     //Guarda nueva maquina
@@ -52,7 +52,7 @@ public class MaquinaController {
 
         model.addAttribute("maquina",maquina);
 
-        return "/admin/maquinas/maquina-expand";
+        return "admin/maquinas/maquina-expand";
     }
 
     //Guarda edición de maquina en el dashboard del admin
@@ -74,7 +74,7 @@ public class MaquinaController {
         model.addAttribute("proveedores",proveedorService.listarProveedores());
 
 
-        return "/admin/maquinas/maquina-editar";
+        return "admin/maquinas/maquina-editar";
     }
 
     @GetMapping("/dash-maquinas/eliminar")

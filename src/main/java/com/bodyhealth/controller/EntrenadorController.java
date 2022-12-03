@@ -66,7 +66,7 @@ public class EntrenadorController {
         model.addAttribute("trainersDesactivados",desactivados);
         model.addAttribute("admins",adminService.listarAdministradores());
 
-        return "/admin/trainers/dash-trainers";
+        return "admin/trainers/dash-trainers";
     }
 
     @GetMapping("/admin/dash-trainers/expand/{id_entrenador}")
@@ -77,7 +77,7 @@ public class EntrenadorController {
         model.addAttribute("trainer",trainer);
 
 
-        return "/admin/trainers/trainer-expand";
+        return "admin/trainers/trainer-expand";
     }
 
     @GetMapping("/admin/dash-trainers/expand/editar/{id_entrenador}")
@@ -89,7 +89,7 @@ public class EntrenadorController {
         model.addAttribute("trainer",entrenador);
 
 
-        return "/admin/trainers/trainer-editar";
+        return "admin/trainers/trainer-editar";
     }
 
     //Guarda edición de entrenador en el dashboard del admin
@@ -150,7 +150,7 @@ public class EntrenadorController {
 
         model.addAttribute("clientesAsignados",clientesAsignados);
 
-        return "/trainer/clientes/dash-clientes";
+        return "trainer/clientes/dash-clientes";
     }
 
     @GetMapping("/trainer/dash-clientes/expand/{id_cliente}")
@@ -212,7 +212,7 @@ public class EntrenadorController {
 
 
 
-        return "/trainer/clientes/cliente-expand";
+        return "trainer/clientes/cliente-expand";
     }
 
 
@@ -238,7 +238,7 @@ public class EntrenadorController {
     @GetMapping("/trainer/dashboard")
     public String irDashboard(){
 
-        return "/trainer/dashboard";
+        return "trainer/dashboard";
     }
 
     //M I P E R F I L
@@ -250,7 +250,7 @@ public class EntrenadorController {
 
         model.addAttribute("trainer",entrenador);
 
-        return "/trainer/perfil";
+        return "trainer/perfil";
     }
 
     @GetMapping("/trainer/dash-trainer/ver-horario/{id_entrenador}")
