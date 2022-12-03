@@ -36,27 +36,27 @@ public class ControladorInicio {
 
     @GetMapping("/")
     public String index(){
-        return "/index";
+        return "index";
     }
 
     @GetMapping("/productos")
     public String productos(Model model){
         List<Producto> product = productoService.listarProductos();
         model.addAttribute("productos",product);
-        return "/cliente/productos";
+        return "cliente/productos";
     }
 
     @GetMapping("/planes")
     public String planes(){
-        return "/cliente/planes";
+        return "cliente/planes";
     }
     @GetMapping("/noticias")
     public String noticias(){
-        return "/cliente/noticias";
+        return "cliente/noticias";
     }
     @GetMapping("/registro-cliente")
     public String registroCliente(){
-        return "/cliente/registro-cliente";
+        return "cliente/registro-cliente";
     }
     @GetMapping("/login1")
     public String login(){
@@ -65,7 +65,7 @@ public class ControladorInicio {
     //Prueba de nuevo regstro cliente plantilla
     @GetMapping("/registroCliente")
     public String registroClientePlantilla(){
-        return "/cliente/registroCliente";
+        return "cliente/registroCliente";
     }
     @PostMapping("/dash-clientes/expand/guardar")
     public String guardarClienteIndex(Cliente cliente, @RequestParam("file") MultipartFile imagen){
@@ -88,19 +88,19 @@ public class ControladorInicio {
     @GetMapping("/administradores")
     public String administrador(){
         log.info("ENTRO A ADMINS");
-        return "/admin/dashboard";
+        return "admin/dashboard";
     }
 
     @GetMapping("/trainer")
     public String trainers(){
         log.info("ENTRO A TRAINER");
-        return "/trainer/dashboard";
+        return "trainer/dashboard";
     }
 
     @GetMapping("/errores/403")
     public String muestraAccesoDenegado(){
         log.info("ENTRO A errores");
-        return "/errores/403";
+        return "errores/403";
     }
     
 
