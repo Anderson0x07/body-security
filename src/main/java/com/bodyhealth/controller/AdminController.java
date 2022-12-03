@@ -44,12 +44,12 @@ public class AdminController {
         log.info("dashboard");
         model.addAttribute("admin");
 
-        return "/admin/dashboard";
+        return "admin/dashboard";
     }
 
     @GetMapping("/admin/dash-horarios")
     public String listarHorarios(){
-        return "/admin/dash-horarios";
+        return "admin/dash-horarios";
     }
 
 
@@ -61,7 +61,7 @@ public class AdminController {
 
         model.addAttribute("admin",administrador);
 
-        return "/admin/perfil";
+        return "admin/perfil";
     }
 
 
