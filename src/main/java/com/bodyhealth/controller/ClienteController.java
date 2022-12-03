@@ -89,7 +89,7 @@ public class ClienteController {
         model.addAttribute("clientesDesactivados",desactivados);
         model.addAttribute("rol",rolRepository.getReferenceById(2));
 
-        return "/admin/clientes/dash-clientes";
+        return "admin/clientes/dash-clientes";
     }
 
     @GetMapping("/admin/dash-clientes/expand/{id_cliente}")
@@ -156,7 +156,7 @@ public class ClienteController {
 
 
 
-        return "/admin/clientes/cliente-expand";
+        return "admin/clientes/cliente-expand";
     }
 
     //Guarda clientes en el dashboard del admin
@@ -238,7 +238,7 @@ public class ClienteController {
         model.addAttribute("metodos",metodoPagoRepository.findAll());
 
 
-        return "/admin/clientes/cliente-editar";
+        return "admin/clientes/cliente-editar";
     }
 
     @PostMapping("/admin/dash-clientes/expand/guardar-control")
